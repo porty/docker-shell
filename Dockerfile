@@ -6,11 +6,8 @@ RUN \
         git \
         curl \
         screen \
-        py-pip \
         bash \
         htop
-
-RUN pip install awscli --upgrade --user
 
 RUN \
     echo PasswordAuthentication no >> /etc/ssh/sshd_config && \
