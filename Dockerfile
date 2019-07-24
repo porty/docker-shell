@@ -17,6 +17,9 @@ RUN \
   mkdir -p ~/.ssh && \
   wget -O - https://github.com/porty.keys >> ~/.ssh/authorized_keys
 
+# undisable root account, give rubbish password hash
+RUN passwd -u root
+
 ADD start.sh /
 
 CMD ["/start.sh"]
